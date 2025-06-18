@@ -1,3 +1,5 @@
+import "./styles.css"
+
 export default function Products() {
     return (
         <section className="products-container">
