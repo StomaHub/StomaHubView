@@ -2,8 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import "./styles.css";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+import { BrowserRouter as Router } from "react-router-dom";
+import Navegation from './components/navBar/navBar';
 
-  </StrictMode>,
+createRoot(document.getElementById('root')!).render(
+   <Router>
+    <StrictMode>
+      <Navegation/>
+    </StrictMode>
+  </Router>
 )
