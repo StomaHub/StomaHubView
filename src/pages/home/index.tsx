@@ -7,13 +7,14 @@ import TitleHome from "../../components/tilteHome";
 import Title from "../../components/title/Title";
 import FooterLinks from "../../components/footerNav/footerLinks";
 import FooterLegal from "../../components/footerNav/footerLegal";
+import Avaliation from "../../components/avaliation";
 
 // TODO: Adicionar os cards; 
 // Revisar algumas classes que se repetem ver se há uma maneira de fazer de uma melhor forma
 //Ajustar as rotas dos links do footer
 export default function Home (){
     return (
-    <div>
+    <div className="bg-[#F5F9FD]">
         {/* Cabeçalho */}
         <Navegation/>
 
@@ -75,11 +76,27 @@ export default function Home (){
         title="O que nossos usuários dizem"
         description="Depoimentos reais de pessoas que encontraram apoio e informação na nossa plataforma."
         />
-
         </div>
-        {/* Cards com as avaliaões */}
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
+            <Avaliation
+                comment="A plataforma mudou minha vida. Agora me sinto mais segura e informada sobre meus cuidados"
+                userName="Maria das Dores"
+                age={54}
+                stars={5} 
+                />
+            <Avaliation
+                comment="O diário de saúde facilitou muito minhas consultas. Os médicos ficam impressionados com o histórico."
+                userName="João Paulo"
+                age={31}
+                stars={5} 
+                />
+            <Avaliation
+                comment="Os materiais educativos são excelentes e me ajudaram muito no pós-operatório."
+                userName="Ana Carolina"
+                age={69}
+                stars={5} 
+                />
         </div>
     </div>
 
