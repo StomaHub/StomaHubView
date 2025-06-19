@@ -1,0 +1,37 @@
+.search-container {
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.filter-content::placeholder {
+    font-size: .90rem;
+}
+
+.filter-content {
+    font-size: .90rem;
+    margin-right: 10px;
+}
+
+.combo-box-container {
+    align-items: center;
+    border: 1px solid #0000002a;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.search {
+    border: 1px solid #0000002a;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.filter-content {
+    border: none;
+    outline: none;
+}
+
+.filter-content:focus {
+    border: none;
+    outline: none;
+  }

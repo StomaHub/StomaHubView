@@ -1,5 +1,6 @@
 import LibaryPost from "../../components/libaryPost";
 import Navegation from "../../components/navBar/navBarLinks";
+import Search from "../../components/search";
 import Title from "../../components/title/Title";
 import "./styles.css"
 
@@ -14,7 +15,7 @@ export default function Libary() {
                     description="Acesse materiais educativos confiáveis, guias práticos e recursos especializados para cuidados com estomia."
                 />
 
-                {/*Pesquisar*/}
+                <Search comboBox={["Todos", "Cuidados básicos", "Tutoriais", "Nutrição", "Sinais de alerta"]} placeholder="Pesquisar materiais" />
 
                 <section className="posts-libary-container">
                     <LibaryPost
