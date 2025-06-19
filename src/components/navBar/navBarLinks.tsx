@@ -9,7 +9,7 @@ export default function NavBarLinks() {
       icone={Heart}
       listaNav={[
         { nome: "Início", icone: Heart, path: "/" },
-        { nome: "Biblioteca", icone: Book, path:"/biblioteca" },
+        { nome: "Biblioteca", icone: Book, path:"/libary" },
         { nome: "Produtos", icone: Package, path:"/produtos" },
         { nome: "Monitoramento", icone: Check, path:"/monitoramento" },
         { nome: "Diário", icone: Calendar, path:"/diario" },
