@@ -1,0 +1,35 @@
+.libary-post-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: .2s;
+    border-radius: 8px;
+}
+
+.libary-post-container:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.288);
+}
+
+.libary-post-container:hover img {
+    scale: 1.08;
+}
+
+.libary-post-container:hover .libary-card-title {
+    color: #007400;
+}
+
+.libary-post-container img {
+    width: 40px;
+    background-color: #e9f4ff;
+    border-radius: 5px;
+    opacity: 70%;
+    padding: 8px;
+    transition: .1s;
+}
+
+.libary-card-title {
+    opacity: 80%;
+    font-weight: 600;
+    transition: .25s;
+    font-size: 1.1rem;
+}
