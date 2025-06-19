@@ -2,7 +2,7 @@ import { Book, Package, Check, Calendar, Heart } from "lucide-react";
 import NavBar from "./index.tsx";
 
 
-export default function Navegation() {
+export default function NavBarLinks() {
   return (
     <NavBar
       titulo="OstomyHub"

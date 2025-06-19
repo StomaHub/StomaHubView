@@ -2,13 +2,14 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import "./styles.css";
 
-import { BrowserRouter as Router } from "react-router-dom";
-import Navegation from './components/navBar/navBar';
-
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from './pages/home';
 createRoot(document.getElementById('root')!).render(
    <Router>
     <StrictMode>
-      <Navegation/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
     </StrictMode>
   </Router>
 

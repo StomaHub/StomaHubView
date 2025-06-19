@@ -1,14 +1,15 @@
-import "./button.css";
+
+import "../../styles.css"
 
 type ButtonProps = {
     icon: string;
     label: string;
     description: string;
+
 }
 
 
-
-function button( {icon, label, description }: ButtonProps) {
+function Button( {icon, label, description}: ButtonProps) {
   return (
     <button className="h-28 w-160 bg-white text-black font-semibold rounded-lg min-h-fit flex flex-row">
         <div className="bg-[#c8f5cd] rounded-lg w-12 h-12 flex items-center justify-center mr-[2%] ml-[2%] mt-[7%] mb-[5%]">
@@ -28,4 +29,4 @@ function button( {icon, label, description }: ButtonProps) {
   );
 }
 
-export default button;
+export default Button;

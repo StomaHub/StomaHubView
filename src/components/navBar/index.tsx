@@ -3,17 +3,21 @@ import { NavLink } from "react-router-dom";
 import "../../styles.css";
 
 
+
 interface ItemNav {
   nome: string;
-  icone: LucideIcon;
+  icone?: LucideIcon;
   path:string;
 }
 
 interface NavegationProps {
   titulo: string;
-  icone: LucideIcon;
+  icone?: LucideIcon;
   listaNav: ItemNav[];
+  // variant?: "navbar" | "footer";
 }
+
+
 
 export default function NavBar({ titulo, icone: Icon, listaNav }: NavegationProps) {
   return (
@@ -22,7 +26,7 @@ export default function NavBar({ titulo, icone: Icon, listaNav }: NavegationProp
         
         <div className="flex items-center justify-between h-16">
           <NavLink to="/" className="flex items-center space-x-2">
-            <Icon className="w-6 h-6 text-emerald-700" />
+            {Icon && <Icon className="w-6 h-6 text-emerald-700" />}
             <span className="text-xl font-semibold text-slate-800">{titulo}</span>
           </NavLink>
 
@@ -34,7 +38,7 @@ export default function NavBar({ titulo, icone: Icon, listaNav }: NavegationProp
                   <li
                     key={index}
                     className="flex items-center gap-2 px-2 py-1 rounded-md hover:bg-emerald-50 transition">
-                    <ItemIcon className="w-5 h-5 text-slate-700" />
+                    {ItemIcon && <ItemIcon className="w-5 h-5 text-slate-700" />}
                     <NavLink to={item.path}className={({isActive})=> 
                         isActive ?
                         "text-slate-700 text-sm font-medium"
