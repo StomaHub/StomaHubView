@@ -1,4 +1,5 @@
 import DailyForm from "../../components/dailyForm";
+import DailyHistory from "../../components/dailyHistory";
 import Navegation from "../../components/navBar/navBarLinks";
 import Title from "../../components/title/Title";
 import "./styles.css"
@@ -15,6 +16,8 @@ export default function Daily() {
 
             <section className="content-daily-container flex justify-between px-[80px]">
                 <DailyForm />
+
+                <DailyHistory />
             </section>
         </section>
     )
