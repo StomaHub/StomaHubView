@@ -12,7 +12,7 @@ export default function NavBarLinks() {
         { nome: "Biblioteca", icone: Book, path:"/libary" },
         { nome: "Produtos", icone: Package, path:"/produtos" },
         { nome: "Monitoramento", icone: Check, path:"/monitoramento" },
-        { nome: "Diário", icone: Calendar, path:"/diario" },
+        { nome: "Diário", icone: Calendar, path:"/daily" },
       ]}
     />
   );
