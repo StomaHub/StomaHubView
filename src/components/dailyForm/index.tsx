@@ -26,6 +26,10 @@ export default function DailyForm() {
                     <textarea name="observation" id="observation" placeholder="Anotações sobre cuidados, medicamentos, atividades..."></textarea>
                 </div>
 
+                <button className="simple-button">
+                    Salvar
+                </button>
+
             </form>
         </section>
     );

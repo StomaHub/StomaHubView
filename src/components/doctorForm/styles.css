@@ -1,9 +1,25 @@
-.form-daily-add-new {
+.form-expert-add-new {
     font-weight: 600;
     font-size: 1.15rem;
 }
 
-.daily-form-container {
+.simple-button {
+    background-color: #007D57;
+    border-radius: 6px;
+    font-size: .9rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 35px;
+    margin-top: 30px;
+    transition: .2s;
+}
+
+.simple-button:hover {
+    transform: scale(1.03);
+}
+
+.expert-form-container {
     background-color: #fff;
     border-radius: 10px;
     min-width: 390px;
@@ -41,20 +57,4 @@
     flex-direction: column;
     gap: 6px;
     margin-top: 25px;
-}
-
-.simple-button {
-    background-color: #007D57;
-    border-radius: 6px;
-    font-size: .9rem;
-    cursor: pointer;
-    font-weight: 600;
-    color: #fff;
-    padding: 10px 35px;
-    margin-top: 30px;
-    transition: .2s;
-}
-
-.simple-button:hover {
-    transform: scale(1.03);
 }
