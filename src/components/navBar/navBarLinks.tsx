@@ -1,4 +1,4 @@
-import { Book, Package, Check, Calendar, Heart } from "lucide-react";
+import { Book, Package, Check, Calendar, Heart, Phone } from "lucide-react";
 import NavBar from "./index.tsx";
 
 
@@ -13,6 +13,7 @@ export default function NavBarLinks() {
         { nome: "Produtos", icone: Package, path:"/produtos" },
         { nome: "Monitoramento", icone: Check, path:"/monitoramento" },
         { nome: "Diário", icone: Calendar, path:"/daily" },
+        { nome: "Especialistas", icone: Phone, path:"/expert" },
       ]}
     />
   );
