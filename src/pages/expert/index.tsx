@@ -1,4 +1,5 @@
 import DoctorForm from "../../components/doctorForm";
+import DoctorList from "../../components/doctorList";
 import Navegation from "../../components/navBar/navBarLinks";
 import Title from "../../components/title/Title";
 import "./styles.css"
@@ -13,7 +14,9 @@ export default function Expert() {
                 description="Adicione aqui os especialistas que o atendem. Nosso objetivo é garantir uma comunicação clara, direta e eficiente com cada um deles."
             />
 
-            <section className="flex px-[80px]">
+            <section className="flex justify-between px-[80px] gap-[80px]">
+                <DoctorList />
+                
                 <DoctorForm />
             </section>
 

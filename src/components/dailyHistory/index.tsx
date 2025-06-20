@@ -1,4 +1,4 @@
-import DailyHistoryCard from "../dailyHistoryCard";
+import DailyHistoryCard from "./dailyHistoryCard";
 import "./styles.css"
 
 export default function DailyHistory() {

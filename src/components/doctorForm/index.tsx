@@ -1,4 +1,3 @@
-import SimpleButton from "../simpleButton/SimpleButton";
 import "./styles.css"
 
 export default function DoctorForm() {

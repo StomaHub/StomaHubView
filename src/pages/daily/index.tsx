@@ -14,7 +14,7 @@ export default function Daily() {
                 description="Registre sintomas, fotos e observações diárias para acompanhar sua evolução e compartilhar informações precisas com sua equipe médica."
             />
 
-            <section className="content-daily-container flex justify-between px-[80px]">
+            <section className="content-daily-container px-[80px]">
                 <DailyForm />
 
                 <DailyHistory />
