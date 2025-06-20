@@ -1,0 +1,38 @@
+.card-doctor-container {
+    border: 1px solid #00000028;
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.info-card-container span {
+    font-weight: 600;
+}
+
+.info-card-container {
+    margin-top: 20px;
+}
+
+.info-card-container p {
+    font-size: .9rem;
+}
+
+.title-card-doctor > img {
+    width: 20px;
+}
+
+.title-card-doctor {
+    margin-bottom: 10px;
+}
+
+.title-card-doctor p {
+    font-weight: 600;
+}
+
+.info-container-doctor span {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.info-card-container p {
+    font-size: .9rem;
+}
