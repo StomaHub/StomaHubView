@@ -1,0 +1,29 @@
+.card-history-container {
+    border: 1px solid #00000028;
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.info-card-container span {
+    font-weight: 600;
+}
+
+.info-card-container {
+    margin-top: 20px;
+}
+
+.info-card-container p {
+    font-size: .9rem;
+}
+
+.title-card-hisory > img {
+    width: 20px;
+}
+
+.title-card-hisory {
+    margin-bottom: 10px;
+}
+
+.title-card-hisory p {
+    font-weight: 600;
+}

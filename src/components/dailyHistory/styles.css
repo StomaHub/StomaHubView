@@ -1,0 +1,12 @@
+.daily-history-section {
+    background-color: #fff;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.title-container {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
