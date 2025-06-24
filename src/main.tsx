@@ -7,6 +7,7 @@ import Home from './pages/home';
 import Libary from './pages/libary';
 import Daily from './pages/daily';
 import Expert from './pages/expert';
+import ProductsPage from './pages/products';
 createRoot(document.getElementById('root')!).render(
    <Router>
     <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path='/libary' element={<Libary/>}/>
         <Route path='/daily' element={<Daily/>}/>
         <Route path='/expert' element={<Expert/>}/>
+        <Route path='/products' element={<ProductsPage/>}/>
       </Routes>
     </StrictMode>
   </Router>

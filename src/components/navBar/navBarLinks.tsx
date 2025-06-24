@@ -10,7 +10,7 @@ export default function NavBarLinks() {
       listaNav={[
         { nome: "Início", icone: Heart, path: "/" },
         { nome: "Biblioteca", icone: Book, path:"/libary" },
-        { nome: "Produtos", icone: Package, path:"/produtos" },
+        { nome: "Produtos", icone: Package, path:"/products" },
         { nome: "Monitoramento", icone: Check, path:"/monitoramento" },
         { nome: "Diário", icone: Calendar, path:"/daily" },
         { nome: "Especialistas", icone: Phone, path:"/expert" },

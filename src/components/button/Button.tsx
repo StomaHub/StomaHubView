@@ -1,19 +1,20 @@
 
 import "../../styles.css"
+import {  type LucideIcon } from "lucide-react";
 
 type ButtonProps = {
-    icon: string;
+    icon: LucideIcon;
     label: string;
     description: string;
 
 }
 
 
-function Button( {icon, label, description}: ButtonProps) {
+ export default function Button( {icon:Icon, label, description}: ButtonProps) {
   return (
     <button className="h-28 w-160 bg-white text-black font-semibold rounded-lg min-h-fit flex flex-row">
         <div className="bg-[#c8f5cd] rounded-lg w-12 h-12 flex items-center justify-center mr-[2%] ml-[2%] mt-[7%] mb-[5%]">
-            <img src={icon} alt="Icon" className="h-10 w-10" />
+           <Icon className="h-10 w-10" />
         </div>
         <div className="flex flex-row mt-[2%] mb-[2%] w-full h-full ">
             <div className="display: flex flex-col ml-[2%] mr-[2%] text-left">
@@ -29,4 +30,3 @@ function Button( {icon, label, description}: ButtonProps) {
   );
 }
 
-export default Button;
