@@ -111,7 +111,7 @@ export default function Home (){
                 </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-10 justify-center font-medium h-10"> 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center font-medium h-10"> 
                 
                 <div className=" bg-white text-emerald-600 hover:bg-emerald-50
                  px-8 py-3 text-lg rounded-lg shadow-lg">
