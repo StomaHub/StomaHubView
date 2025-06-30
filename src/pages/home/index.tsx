@@ -2,7 +2,7 @@ import { Heart } from "lucide-react";
 import "../../styles.css"
 import FooterDescription from "../../components/footerNav/footerDescription";
 import Navegation from "../../components/navBar/navBarLinks";
-import SimpleButton from "../../components/simpleButton/SimpleButton";
+import SimpleButton from "../../components/buttons/SimpleButton";
 import TitleHome from "../../components/tilteHome";
 import Title from "../../components/title/Title";
 import FooterLinks from "../../components/footerNav/footerLinks";
@@ -111,13 +111,14 @@ export default function Home (){
                 </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"> 
-                <div className=" flex items-center justify-center gap-4 whitespace-nowrap 
-                font-medium ring-offset-background transition-colors focus-visible:outline-none 
-                focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
-                disabled:pointer-events-none disabled:opacity-50 h-10 bg-white text-emerald-600 
-                hover:bg-emerald-50 px-8 py-3 text-lg rounded-lg shadow-lg">
+            <div className="flex flex-col sm:flex-row gap-10 justify-center font-medium h-10"> 
+                
+                <div className=" bg-white text-emerald-600 hover:bg-emerald-50
+                 px-8 py-3 text-lg rounded-lg shadow-lg">
                     <SimpleButton label="Explorar conteúdos"/>
+                </div>
+                <div className="bg-white text-emerald-600 hover:bg-emerald-50
+                 px-8 py-3 text-lg rounded-lg shadow-lg">
                     <SimpleButton label ="Inicar diário"/>
                 </div>
             </div>
@@ -139,9 +140,9 @@ export default function Home (){
             title="Links rápidos"
             links={[
                 {name: "Biblioteca", path:"/biblioteca"},
-                {name: "Biblioteca", path:"/biblioteca"},
-                {name: "Biblioteca", path:"/biblioteca"},
-                {name: "Biblioteca", path:"/biblioteca"},
+                {name: "Produtos", path:"/biblioteca"},
+                {name: "Monitoramento", path:"/biblioteca"},
+                {name: "Diário", path:"/biblioteca"},
 
             ]}
             />
