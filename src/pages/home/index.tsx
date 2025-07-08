@@ -2,9 +2,11 @@ import { Heart } from "lucide-react";
 import "../../styles.css"
 import FooterDescription from "../../components/footerNav/footerDescription";
 import Navegation from "../../components/navBar/navBarLinks";
-import SimpleButton from "../../components/simpleButton/SimpleButton";
-import TitleHome from "../../components/tilteHome";
-import Title from "../../components/title/Title";
+
+import SimpleButton from "../../components/buttons/SimpleButton";
+import TitleHome from "../../components/titles/tilteHome";
+import Title from "../../components/titles/Title";
+
 import FooterLinks from "../../components/footerNav/footerLinks";
 import FooterLegal from "../../components/footerNav/footerLegal";
 import Avaliation from "../../components/avaliation";
@@ -55,7 +57,7 @@ export default function Home (){
         </div>
     </div>
 
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="flex justify-center">
         <div className="text-center mb-16">
             <Title 
             title="Recursos Essenciais" 

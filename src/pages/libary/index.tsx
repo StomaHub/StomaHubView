@@ -1,7 +1,7 @@
 import LibaryPost from "../../components/libaryPost";
 import Navegation from "../../components/navBar/navBarLinks";
 import Search from "../../components/search";
-import Title from "../../components/title/Title";
+import Title from "../../components/titles/Title";
 import "./styles.css"
 
 export default function Libary() {
