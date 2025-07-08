@@ -2,7 +2,7 @@
 import Card from "../../components/card";
 import NavBarLinks from "../../components/navBar/navBarLinks";
 import Search from "../../components/search";
-import Title from "../../components/title/Title";
+import Title from "../../components/titles/Title";
 
 
 export default function ProductsPage() {

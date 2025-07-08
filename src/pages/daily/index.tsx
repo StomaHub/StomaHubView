@@ -1,7 +1,7 @@
 import DailyForm from "../../components/dailyForm";
 import DailyHistory from "../../components/dailyHistory";
 import Navegation from "../../components/navBar/navBarLinks";
-import Title from "../../components/title/Title";
+import Title from "../../components/titles/Title";
 import "./styles.css"
 
 export default function Daily() {
