@@ -8,6 +8,7 @@ export default function Stars({ stars }: StarsProps) {
     <div className="flex flex-row gap-[3px]">
       {Array.from({ length: stars }).map((_, i) => (
         <img
+          data-testid="star" 
           key={i}
           src="/icons/star.svg"
           alt="star"
