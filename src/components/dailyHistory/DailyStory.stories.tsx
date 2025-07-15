@@ -5,6 +5,12 @@ import DailyHistory from "./index";
 const meta: Meta<typeof DailyHistory> = {
   title: "Componentes/DailyHistory",
   component: DailyHistory,
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: "620px", margin: "2rem auto" }}>
+        <Story />
+      </div>
+    ),]
 };
 
 export default meta;

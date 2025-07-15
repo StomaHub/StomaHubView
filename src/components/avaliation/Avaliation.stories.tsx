@@ -6,6 +6,13 @@ import Avaliation from "./index";
 const meta: Meta<typeof Avaliation> = {
   title: "Componentes/Avaliation",
   component: Avaliation,
+      decorators: [
+    (Story) => (
+      <div style={{ width: "450px", margin: "2rem auto"}}>
+        <Story />
+      </div>
+    ),]
+  
 };
 
 export default meta;

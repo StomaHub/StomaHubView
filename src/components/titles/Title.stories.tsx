@@ -5,6 +5,13 @@ import Title from "./Title";
 const meta: Meta<typeof Title> = {
   title: "Componentes/Title",
   component: Title,
+  decorators: [
+    (Story) => (
+      <div style={{margin: "2rem auto"}}>
+        <Story />
+      </div>
+    )
+  ]
 };
 
 export default meta;
