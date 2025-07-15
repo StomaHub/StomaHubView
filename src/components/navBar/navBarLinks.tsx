@@ -4,11 +4,10 @@ import NavBar from "./index.tsx";
 
 export default function NavBarLinks() {
 
-  const logo= "./logo.png"
   return (
     <NavBar
       titulo="OstomyHub"
-      iconeLogo={logo}
+      icone={Heart}
       listaNav={[
         { nome: "Início", icone: Heart, path: "/" },
         { nome: "Biblioteca", icone: Book, path:"/libary" },
@@ -16,7 +15,7 @@ export default function NavBarLinks() {
         { nome: "Monitoramento", icone: Check, path:"/monitoring" },
         { nome: "Diário", icone: Calendar, path:"/daily" },
         { nome: "Especialistas", icone: Phone, path:"/expert" },
-        { nome: "Login", icone: User, path:"/login" },
+        { nome: "Área do Usuário", icone: User, path:"/user" },
       ]}
     />
   );
