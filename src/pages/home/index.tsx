@@ -1,15 +1,10 @@
-import { Heart } from "lucide-react";
 import "../../styles.css"
-import FooterDescription from "../../components/footerNav/footerDescription";
 import Navegation from "../../components/navBar/navBarLinks";
-
 import SimpleButton from "../../components/simpleButton/SimpleButton";
 import TitleHome from "../../components/titles/tilteHome";
 import Title from "../../components/titles/Title";
-
-import FooterLinks from "../../components/footerNav/footerLinks";
-import FooterLegal from "../../components/footerNav/footerLegal";
 import Avaliation from "../../components/avaliation";
+import Footer from "../../components/footer";
 
 // TODO: Adicionar os cards; 
 // Revisar algumas classes que se repetem ver se há uma maneira de fazer de uma melhor forma
@@ -127,41 +122,7 @@ export default function Home (){
 
         {/*  Testando o Footer . TODO: Lembrar de organizar*/}
 
-        <footer className="bg-slate-800 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-           <FooterDescription
-           title="OstomyHub"
-           icon={Heart}
-           description="Dedicados a oferecer o melhor suporte e informação para
-           pessoas ostomizadas e seus cuidadores, promovendo qualidade de vida e bem-estar."/>
-
-
-            <FooterLinks
-            title="Links rápidos"
-            links={[
-                {name: "Biblioteca", path:"/biblioteca"},
-                {name: "Biblioteca", path:"/biblioteca"},
-                {name: "Biblioteca", path:"/biblioteca"},
-                {name: "Biblioteca", path:"/biblioteca"},
-
-            ]}
-            />
-
-            <FooterLinks
-            title="Suporte"
-            links={[
-                {name: "Central de ajuda", path:"/biblioteca"},
-                {name: "Fale conosco", path:"/biblioteca"},
-                {name: "Termos de uso", path:"/biblioteca"},
-                {name: "Privacidade", path:"/biblioteca"},
-            ]}
-            />
-            </div>
-        </div>
-
-        <FooterLegal text="© 2024 OstomyCare. Todos os direitos reservados."/>
-    </footer>
+        <Footer />
     </div>
     )
 }

@@ -1,4 +1,4 @@
-import LibaryPost from "../components/libaryPost";
+import LibaryPost from "../src/components/libaryPost";
 import {fireEvent, render, screen} from "@testing-library/react";
 
 

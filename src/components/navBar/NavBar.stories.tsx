@@ -26,9 +26,13 @@ export const Default: Story = {
     iconeLogo: "/icons/logo.svg",
     icone: Home,
     listaNav: [
-      { nome: "Home", icone: Home, path: "/" },
-      { nome: "Perfil", icone: User, path: "/perfil" },
-      { nome: "Configurações", icone: Settings, path: "/config" },
+      { nome: "Início", icone: Home, path: "/" },
+      { nome: "Biblioteca", icone: User, path: "/perfil" },
+      { nome: "Produtos", icone: User, path: "/perfil" },
+      { nome: "Monitoramento", icone: User, path: "/icons/" },
+      { nome: "Diário", icone: User, path: "/icons;" },
+      { nome: "Especialistas", icone: Settings, path: "/config" },
+      { nome: "Login", icone: Settings, path: "/config" },
     ],
   },
 };

@@ -5,6 +5,12 @@ import LibaryPost from "./index";
 const meta: Meta<typeof LibaryPost> = {
   title: "Componentes/LibaryPost",
   component: LibaryPost,
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: "450px", margin: "2rem auto" }}>
+        <Story />
+      </div>
+    ),]
 };
 
 export default meta;

@@ -5,6 +5,13 @@ import DailyForm from "./index";
 const meta: Meta<typeof DailyForm> = {
   title: "Componentes/DailyForm",
   component: DailyForm,
+  decorators: [
+  (Story) => (
+    <div style={{ maxWidth: "320px", margin: "2rem auto" }}>
+      <Story />
+    </div>
+  ),
+  ],
 };
 
 export default meta;

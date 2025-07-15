@@ -5,6 +5,13 @@ import Search from "./index";
 const meta: Meta<typeof Search> = {
   title: "Componentes/Search",
   component: Search,
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: "70%", margin: "2rem auto" }}>
+        <Story />
+      </div>
+    ),
+  ]
 };
 
 export default meta;

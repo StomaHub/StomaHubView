@@ -17,8 +17,9 @@ export default function Libary() {
 
                 <Search comboBox={["Todos", "Cuidados básicos", "Tutoriais", "Nutrição", "Sinais de alerta"]} placeholder="Pesquisar materiais" />
 
-                <section className="posts-libary-container">
+                <section id="card-libary-container" className="posts-libary-container">
                     <LibaryPost
+                        id="cuidados-stoma"
                         iconPath="/icons/page.svg"
                         title="Guia Completo de Cuidados com Estomia"
                         resume="Manual abrangente sobre os primeiros cuidados e manutenção diária."
@@ -26,6 +27,7 @@ export default function Libary() {
                         date="14/01/2024"/>
 
                     <LibaryPost
+                        id="tutorial-bolsa"
                         iconPath="/icons/play.svg"
                         title="Vídeo: Como Trocar a Bolsa Coletora"
                         resume="Tutorial passo a passo demonstrando a troca segura da bolsa."
@@ -33,6 +35,7 @@ export default function Libary() {
                         date="09/01/2024"/>
 
                     <LibaryPost
+                        id="alimentacao"
                         iconPath="/icons/book.svg"
                         title="Alimentação Adequada para Ostomizados"
                         resume="Dicas nutricionais e receitas adaptadas para diferentes tipos de estomia."
@@ -40,6 +43,7 @@ export default function Libary() {
                         date="04/01/2024"/>
 
                     <LibaryPost
+                        id="alertas-visuais"
                         iconPath="/icons/galery.svg"
                         title="Galeria: Sinais de Alerta Visuais"
                         resume="Imagens ilustrativas dos principais sinais que requerem atenção médica."

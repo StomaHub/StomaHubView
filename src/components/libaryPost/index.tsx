@@ -3,6 +3,7 @@ import "./styles.css"
 
 //Proprieades esperadas pelo presente componete
 type LibaryPostProps = {
+    id: string,
     title: string,
     resume: string,
     author: string,
@@ -21,7 +22,7 @@ export default function LibaryPost(data: LibaryPostProps) {
     }
 
     return (
-        <section className="libary-post-container max-w-[380px]" onClick={handleClick}>
+        <section id={data.id} className="libary-post-container max-w-[380px]" onClick={handleClick}>
             <div className="flex flex-row gap-[10px] items-start">
                 <img src={data.iconPath} alt="icon" />
                 <div className="grow-1">

@@ -1,4 +1,4 @@
-import Avaliation from "../components/avaliation";
+import Avaliation from "../src/components/avaliation";
 import {render, screen} from "@testing-library/react";
 
 
