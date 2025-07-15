@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import SearchComponent from "../components/search";
+import SearchComponent from "../src/components/search";
 
 describe("Search Component", () => {
   const mock = {
