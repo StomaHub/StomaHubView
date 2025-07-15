@@ -3,7 +3,7 @@ import "../../styles.css"
 import FooterDescription from "../../components/footerNav/footerDescription";
 import Navegation from "../../components/navBar/navBarLinks";
 
-import SimpleButton from "../../components/buttons/SimpleButton";
+import SimpleButton from "../../components/simpleButton/SimpleButton";
 import TitleHome from "../../components/titles/tilteHome";
 import Title from "../../components/titles/Title";
 
