@@ -4,6 +4,7 @@ import {fireEvent, render, screen} from "@testing-library/react";
 
 describe("LibaryPost Component", () => {
     const mock = {
+        id: "guia-completo",
         iconPath: "/icons/page.svg",
         title: "Guia Completo de Cuidados com Estomia",
         resume: "Manual abrangente sobre os primeiros cuidados e manutenção diária.",

@@ -7,13 +7,11 @@ import Home from './pages/home';
 import Libary from './pages/libary';
 import Daily from './pages/daily';
 import Expert from './pages/expert';
-import ProductsPage from './pages/products';
 import LoginPage from './pages/login';
 import MonitoringPage from './pages/monitoring';
 import FormLogin from './components/formLogin';
 import FormRegistration from './components/formRegistration';
 import UserProvider from './context/UserProvider';
-import User from './components/user';
 import UserPage from './pages/user';
 createRoot(document.getElementById('root')!).render(
    <Router>

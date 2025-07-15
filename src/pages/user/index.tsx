@@ -4,7 +4,6 @@ import FooterLegal from "../../components/footerNav/footerLegal";
 import FooterLinks from "../../components/footerNav/footerLinks";
 import Navegation from "../../components/navBar/navBarLinks";
 import User from "../../components/user";
-import SimpleButton from "../../components/simpleButton/SimpleButton";
 export default function UserPage(){
     return(
 

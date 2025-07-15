@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SimpleButton from "../simpleButton/SimpleButton";
-import { Link, useNavigate, useNavigation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUserContext } from "../../context/UserContext";
 
 //Usamos o useContext ´para compartilhar os dados, no caso o nome, do usuário por toda a aplicação
@@ -62,6 +62,7 @@ export default function FormRegistration(){
                 <label>Senha</label>
                 <input type="password" placeholder="Digite sua senha" 
                 onChange={(e)=>setPassword(e.target.value)}
+                value={password}
                 className="border rounded px-2 py-1"/>
             </div>
 

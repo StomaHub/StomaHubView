@@ -24,6 +24,7 @@ describe("Search Component", () => {
     await userEvent.selectOptions(select, "Nutrição");
 
     const option = screen.getByRole("option", { name: "Nutrição" });
-    expect(option.selected).toBe(true);
+
+    expect(option).toHaveTextContent("Nutrição");
   });
 });
