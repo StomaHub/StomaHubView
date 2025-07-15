@@ -4,6 +4,7 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: .2s;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .libary-post-container:hover {
@@ -16,6 +17,17 @@
 
 .libary-post-container:hover .libary-card-title {
     color: #007400;
+}
+
+.about-actor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acess-on-the-card {
+    align-self: flex-end;
+
 }
 
 .libary-post-container img {

@@ -1,9 +1,6 @@
 import { type LucideIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import "../../styles.css";
-import "./style.css"
-
-
 
 interface ItemNav {
   nome: string;
@@ -18,8 +15,6 @@ interface NavegationProps {
   listaNav: ItemNav[];
   // variant?: "navbar" | "footer";
 }
-
-
 
 export default function NavBar({ titulo, icone: Icon, iconeLogo, listaNav }: NavegationProps) {
   return (
