@@ -17,5 +17,7 @@ Comando para execuçao de testes unitários:
   - npm run test
 
 Comando para execução de testes e2e:
+
+  - npx playwright install
   - npx playwright test tests/{nome_do_arquivo}
           Exemplo: npx playwright test tests/{navbar.spec.tsx}
