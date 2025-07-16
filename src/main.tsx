@@ -13,6 +13,7 @@ import FormLogin from './components/formLogin';
 import FormRegistration from './components/formRegistration';
 import UserProvider from './context/UserProvider';
 import UserPage from './pages/user';
+import ProductsPage from './pages/products';
 createRoot(document.getElementById('root')!).render(
    <Router>
     <StrictMode>
@@ -24,10 +25,9 @@ createRoot(document.getElementById('root')!).render(
         <Route path='/libary' element={<Libary/>}/>
         <Route path='/daily' element={<Daily/>}/>
         <Route path='/expert' element={<Expert/>}/>
-        {/* <Route path='/products' element={<ProductsPage/>}/> */}
+        <Route path='/products' element={<ProductsPage/>}/>
         <Route path='/monitoring' element ={<MonitoringPage/>}/>
 
-        {/* Rotas aninhadas para os navegar entre os formulários */}
         <Route path='/login' element={<LoginPage />}>
           <Route index element={<FormLogin />} />
           <Route path='register' element={<FormRegistration />}/>

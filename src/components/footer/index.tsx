@@ -18,13 +18,12 @@ export default function Footer() {
             <FooterLinks
             title="Links rápidos"
             links={[
-                {name: "Início", path:"/biblioteca"},
-                {name: "Biblioteca", path:"/biblioteca"},
-                {name: "Produtos", path:"/biblioteca"},
-                {name: "Monitoramento", path:"/biblioteca"},
-                {name: "Diário", path:"/biblioteca"},
-                {name: "Especialistas", path:"/biblioteca"},
-                {name: "Login", path:"/biblioteca"},
+                {name: "Início", path:"/"},
+                {name: "Biblioteca", path:"/libary"},
+                {name: "Produtos", path:"/products"},
+                {name: "Monitoramento", path:"/monitoring"},
+                {name: "Diário", path:"/daily"},
+                {name: "Login", path:"/login"},
 
             ]}
             />
