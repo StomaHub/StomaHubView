@@ -1,0 +1,28 @@
+{
+  "expertform": [
+   
+  ],
+  "daily": [
+    {}
+  ],
+  "products": [
+    {
+      "id": "a40cb709-0de5-4705-8ea9-e42987d32e4b",
+      "name": "Bolsa",
+      "description": "Coletora",
+      "price": "23.00",
+      "image": "",
+      "category": "Bolsas coletoras",
+      "button": "Comprar"
+    },
+    {
+      "id": "5007c324-4345-48b3-8334-528c51fd029d",
+      "name": "a",
+      "description": "a",
+      "price": "a",
+      "image": "a",
+      "category": "Bolsas coletoras",
+      "button": "Comprar"
+    }
+  ]
+}
