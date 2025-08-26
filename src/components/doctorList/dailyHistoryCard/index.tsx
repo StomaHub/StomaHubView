@@ -1,18 +1,8 @@
 import "./styles.css"
+import type { Doctor } from "../../../types/types";
 
-//Formato das propriedades utilizadas nesse componete
-type DoctorCardProps = {
-    // nome do especialista
-    name: string,
 
-    // email de contato do especialista
-    email: string,
-
-    // observação realizada sobre o especialista
-    observation: string
-}
-
-export default function DoctorCard(data: DoctorCardProps) {
+export default function DoctorCard(data: Doctor) {
     return (
         <section className="card-doctor-container">
             <div className="title-card-doctor flex justify-left gap-[10px]">

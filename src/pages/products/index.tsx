@@ -1,71 +1,81 @@
-
+import React, { useState } from "react";
 import Card from "../../components/card";
 import NavBarLinks from "../../components/navBar/navBarLinks";
 import Search from "../../components/search";
 import Title from "../../components/titles/Title";
+import SimpleButton from "../../components/simpleButton/SimpleButton";
+import ProductForm from "./productForm";
+import { Plus } from "lucide-react";
+import useFetch from "../../hook/useFetch";
+import type { Product } from "../../types/types";
 
 
 export default function ProductsPage() {
+  const [showFormProduct, setShowFormProduct] = useState(false);
+  const [filterCategory, setFilterCategoy] =useState<string>("Todos os produtos");
+  const { data: products, isPending, error, fetchData } = useFetch<Product[]>("http://localhost:3000/products");
+
+
+
+  const handleAddProduct = (product: Product) => {
+    if (products) {
+      fetchData(); // Recarrega a lista do "backend"
+    }
+  };
+
+
+ {/* const filterCProducts = products?.filter( (p)=>
+      (filterCategory === "Todos os produtos " || p.category=== filterCategory) &&
+      p.name
+);*/}
+
+
   return (
     <section className="bg-gradient-to-br from-slate-50 to-blue-50">
-      <div>
-        <NavBarLinks />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-         
-          <div className="text-center mb-12">
-            <Title
-              title="Catálogo de Produtos"
-              description="Encontre produtos de qualidade para ostomizados, 
-                com avaliações reais de outros usuários e fornecedores confiáveis."
-            />
-          </div>
+      <NavBarLinks />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="text-center mb-12">
+          <Title
+            title="Catálogo de Produtos"
+            description="Encontre produtos de qualidade para ostomizados, com avaliações reais de outros usuários e fornecedores confiáveis."
+          />
+        </div>
 
-          <div className="rounded-xl p-4 mb-8">
-            <Search
-              comboBox={["Todos os produtos","Bolsas coletoras","Cuidados com a pele","Acessórios","Irrigação",]}
-              placeholder="Pesquisar produtos"
-            />
-          </div>
+        <div className="rounded-xl p-4 mb-8">
+          
+          <Search
+            comboBox={["Todos os produtos","Bolsas coletoras","Cuidados com a pele","Acessórios","Irrigação"]}
+            placeholder="Pesquisar produtos"
+          />
+        </div>
 
-         
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 mb-8">
-            <Card
-              img="/bolsa.webp"
-              imgDescription="teste"
-              title="Bolsa coletora convexa premium"
-              place="OstomyMed"
-              description="Bolsa de alta qualidade com sistema anti-vazamento e conforto superior."
-              price="R$ 45,00"
-              buttonTitle="Comprar"
-            />
-            <Card
-              img="teste.png"
-              imgDescription="teste"
-              title="Bolsa coletora convexa premium"
-              place="OstomyMed"
-              description="Bolsa de alta qualidade com sistema anti-vazamento e conforto superior."
-              price="R$ 45,00"
-              buttonTitle="Comprar"
-            />
-            <Card
-              img="teste.png"
-              imgDescription="teste"
-              title="Bolsa coletora convexa premium"
-              place="OstomyMed"
-              description="Bolsa de alta qualidade com sistema anti-vazamento e conforto superior."
-              price="R$ 45,00"
-              buttonTitle="Comprar"
-            />
-            <Card
-              img="teste.png"
-              imgDescription="teste"
-              title="Bolsa coletora convexa premium"
-              place="OstomyMed"
-              description="Bolsa de alta qualidade com sistema anti-vazamento e conforto superior."
-              price="R$ 45,00"
-              buttonTitle="Comprar"
-            />
+        <div className="flex items-center justify-center mb-6">
+          <div
+            className="flex border rounded px-2 py-1 bg-emerald-600 hover:bg-emerald-700 text-white 
+            text-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+            onClick={() => setShowFormProduct(true)}
+          >
+            <Plus size={30} />
+            <SimpleButton label="Cadastrar produto" />
           </div>
+        </div>
+
+        {showFormProduct && (
+          <ProductForm
+            close={() => setShowFormProduct(false)}
+            add={handleAddProduct}
+            fetch={{ data: products, isPending, error, fetchData }}
+          />
+        )}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 mb-8">
+          {isPending && <p>Carregando produtos...</p>}
+          {error && <p className="text-red-500">{error}</p>}
+          {products && products.length > 0 ? (
+            products.map((p) => <Card key={p.id} {...p} />)
+          ) : (
+            <p className="text-center col-span-3">Nenhum produto encontrado</p>
+          )}
         </div>
       </div>
     </section>

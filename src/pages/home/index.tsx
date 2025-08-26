@@ -20,7 +20,7 @@ export default function Home (){
             <div className="text-center">
             <TitleHome 
             titulo="Cuidado e Apoio para" 
-            tituloDestaque=" Ostomizados"
+            tituloDestaque=" Estomizados"
             descricao="Uma plataforma completa que oferece informações confiáveis,
             suporte especializado e recursos educacionais para melhorar sua qualidade de
             vida e gestão da saúde.">

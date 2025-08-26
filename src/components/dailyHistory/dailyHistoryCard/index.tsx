@@ -1,5 +1,6 @@
 import "./styles.css"
 
+
 //Formato das propriedades utilizadas nesse componete
 type DailyHistoryCardProps = {
     // data de adição do registro
@@ -28,13 +29,14 @@ export default function DailyHistoryCard(data: DailyHistoryCardProps) {
                     <p>
                         <span>Sintomas</span>: {data.symptoms}
                     </p>
+
                     <p>
                         <span>Humor:</span> {data.humor}
                     </p>
                 </div>
-
+                
                 <p>
-                    <span>Observações:</span> {data.humor}
+                    <span>Observações:</span> {data.observation}
                 </p>
             </div>
         </section>

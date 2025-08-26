@@ -1,6 +1,8 @@
+import type { IconNode } from "lucide-react";
 import "../../styles.css"
 type SimpleButtonProps = {
     label: string;
+    icon?: IconNode
   
 }
 

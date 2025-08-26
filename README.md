@@ -10,6 +10,10 @@ Passos para execução em ambiente de desenvolvimento:
   - npm i -y
   - npm run dev
 
+Para rodar o json-server, use:
+  - npx json-server --watch db.json
+
+
 Comando para execução do storybook:
   - npm run storybook
 
@@ -21,3 +25,5 @@ Comando para execução de testes e2e:
   - npx playwright install
   - npx playwright test tests/{nome_do_arquivo}
           Exemplo: npx playwright test tests/{navbar.spec.tsx}
+
+
