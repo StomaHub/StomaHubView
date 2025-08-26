@@ -4,7 +4,7 @@ import "../../styles.css";
 type ReportProps={
     title:string;
     description:string;
-    type: "grave" | "moderado" 
+    type: string
 }
 
 function CardReport({title, description, type}:ReportProps){
