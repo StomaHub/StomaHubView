@@ -1,10 +1,10 @@
 import "../../styles.css";
 import { useState } from "react";
 
-type ReportProps = {
-    title: string;
-    description: string;
-    type: "grave" | "moderado";
+type ReportProps={
+    title:string;
+    description:string;
+    type: string
 }
 
 function CardReport({ title, description, type }: ReportProps) {

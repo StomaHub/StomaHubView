@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import type { UseFetchResult } from "../../../hook/useFetch";
-import type { Products} from "../../../types/types";
+import type { Product as Products} from "../../../../src/types/types";
 import { v4 as uuidv4 } from "uuid";
 
 
