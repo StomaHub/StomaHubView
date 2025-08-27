@@ -6,7 +6,7 @@ export default function NavBarLinks() {
 
   return (
     <NavBar
-      titulo="OstomyHub"
+      titulo="OstomyCare"
       icone={Heart}
       listaNav={[
         { nome: "Início", icone: Heart, path: "/" },

@@ -1,0 +1,110 @@
+{
+  "expertform": [
+    {},
+    {
+      "id": "53138c91-5321-4e18-90b8-de2a0d4e5c67",
+      "name": "Lariany Alves",
+      "email": "lariany@gmail.com",
+      "observation": "Teste"
+    }
+  ],
+  "carrinho": [
+    {
+      "id": "9342",
+      "produtoId": "a40cb709-0de5-4705-8ea9-e42987d32e4b",
+      "nome": "Bolsa",
+      "descricao": "Coletora",
+      "preco": "23.00",
+      "imagem": "",
+      "quantidade": 1,
+      "dataAdicao": "2025-08-27T04:21:33.603Z",
+      "status": "ativo"
+    },
+    {
+      "id": "9469",
+      "produtoId": "d99dd61e-9fa8-4e1d-a885-8734c9baa2c8",
+      "nome": "ProdutoTeste",
+      "descricao": "testeee",
+      "preco": "11111",
+      "imagem": "",
+      "quantidade": 1,
+      "dataAdicao": "2025-08-27T04:22:17.813Z",
+      "status": "ativo"
+    }
+  ],
+  "daily": [
+    {
+      "id": "7526"
+    },
+    {
+      "id": "ff1c",
+      "date": "2025-08-27",
+      "symptoms": "Desconforto abdominal",
+      "humor": "Neutro",
+      "observation": "Observar a intensidade da dor"
+    }
+  ],
+  "reports": [
+    {
+      "id": "3967",
+      "titulo": "Sangamento no estoma",
+      "descricao": "Sangramento persistente ou em grande quantidade",
+      "tipo": "grave",
+      "data": "2025-08-27T04:13:05.948Z",
+      "status": "pendente"
+    },
+    {
+      "id": "6b11",
+      "titulo": "Sangamento no estoma",
+      "descricao": "Sangramento persistente ou em grande quantidade",
+      "tipo": "grave",
+      "data": "2025-08-27T04:13:07.484Z",
+      "status": "pendente"
+    },
+    {
+      "id": "a24e",
+      "titulo": "Inchaço Excessivo",
+      "descricao": "Estoma muito inchado ou com mudança significativa de tamanho",
+      "tipo": "moderado",
+      "data": "2025-08-27T04:14:11.830Z",
+      "status": "pendente"
+    }
+  ],
+  "products": [
+    {
+      "id": "2c9d948a-df0b-4019-b90b-fdac846fc0d5",
+      "name": "Bolsa",
+      "description": "coletora",
+      "price": "23.00",
+      "image": "",
+      "category": "Bolsas coletoras",
+      "button": "Comprar"
+    },
+    {
+      "id": "583cc455-ba7d-4e56-b651-544d6093ee68",
+      "name": "Bolsa",
+      "description": "a",
+      "price": "a",
+      "image": "",
+      "category": "Bolsas coletoras",
+      "button": "Comprar",
+      "buttonDelete": "Excluir"
+    }
+  ],
+  "users": [
+    {
+      "id": "51171a0a-ecda-4f7e-a901-08c75aa203f0",
+      "name": "Lariany",
+      "email": "larianyalves10@gmail.com",
+      "phone": "88992666504",
+      "password": "123456"
+    },
+    {
+      "id": "16a5205b-b3a4-4e7c-b263-88e4124506aa",
+      "name": "teste",
+      "email": "teste@gmail.com",
+      "phone": "1234566",
+      "password": "12345"
+    }
+  ]
+}

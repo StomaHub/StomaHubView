@@ -3,7 +3,7 @@ import FooterDescription from "../../components/footerNav/footerDescription";
 import FooterLegal from "../../components/footerNav/footerLegal";
 import FooterLinks from "../../components/footerNav/footerLinks";
 import Navegation from "../../components/navBar/navBarLinks";
-import User from "../../components/user";
+import User from "../../components/user/index";
 export default function UserPage(){
     return(
 
@@ -11,7 +11,6 @@ export default function UserPage(){
             <Navegation/>
             
             <User/>
-
 
             <footer className="bg-slate-800 text-white py-12 w-full">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

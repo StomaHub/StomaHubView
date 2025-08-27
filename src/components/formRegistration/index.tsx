@@ -1,83 +1,86 @@
 import { useState } from "react";
-import SimpleButton from "../simpleButton/SimpleButton";
 import { Link, useNavigate } from "react-router-dom";
-import { useUserContext } from "../../context/UserContext";
+import { useDispatch } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
+import { registerUser } from "../../features/userSlice";
+import type { User } from "../../types/types";
+import SimpleButton from "../simpleButton/SimpleButton";
 
-//Usamos o useContext ´para compartilhar os dados, no caso o nome, do usuário por toda a aplicação
-export default function FormRegistration(){
-    const [name, setName]=useState('');
-    const [email, setEmail]= useState('');
-    const [phone, setPhone]= useState('');
-    const [password, setPassword]= useState('');
+export default function FormRegistration() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
 
-    //usando o context
-    const{setName: setUserName}= useUserContext();
-    const navigate= useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-    const handleSubmit=(event :React.FormEvent<HTMLFormElement>)=>{
-        event.preventDefault();
-        //salva o nome no nosso context
-        setUserName(name);
+  const createUser = async (user: User) => {
+    const res = await fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    });
+    return res.json();
+  };
 
-        //vquando o usuario clicar em registar, o hook o levará para a tela da area do usuário
-        navigate("/user");
-        console.log("Registrado", {name, email, phone})
-    }
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-    return(
-        <div className="flex justify-center items-center">
+    const newUser: User = { id: uuidv4(), name, email, phone, password };
 
-           <form onSubmit={handleSubmit} className="flex flex-col gap-10 rounded-xl shadow-lg bg-white p-8 w-80">
-             <div className="flex justify-center  items-center gap-2">
-                <h3 className="text-xl font-semibold text-slate-800">Crie uma conta</h3>
-            </div>
+    try{
+    await createUser(newUser);}
+    catch (error){console.log(error)}
+    dispatch(registerUser(newUser)); // salva no Redux
+    navigate("/user");
+  
+  };
 
-            <div className="flex flex-col gap-2">
-                <label>Nome</label>
-                <input type="text" placeholder="Digite seu nome"
-                className="border rounded px-2 py-1"
-                onChange={(e)=> setName(e.target.value)}
-                required
-                />
-            </div>
+  return (
+    <div className="flex justify-center items-center">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-10 rounded-xl shadow-lg bg-white p-8 w-80"
+      >
+        <h3 className="text-xl font-semibold text-slate-800 text-center">
+          Crie uma conta
+        </h3>
 
-            <div className="flex flex-col gap-2">
-                <label>Email</label>
-                <input type="email" placeholder="Digite seu email"
-                onChange={(e)=>setEmail(e.target.value)}
-                className="border rounded px-2 py-1"
-                required
-                 />
-            </div>
-
-            <div className="flex flex-col gap-2">
-                <label>Telefone</label>
-                <input type="tel" placeholder="Digite seu número de telefone"
-                onChange={(e)=>setPhone(e.target.value)}
-                required
-                className="border rounded px-2 py-1" />
-            </div>
-
-            <div className="flex flex-col gap-2">
-                <label>Senha</label>
-                <input type="password" placeholder="Digite sua senha" 
-                onChange={(e)=>setPassword(e.target.value)}
-                value={password}
-                className="border rounded px-2 py-1"/>
-            </div>
-
-            <div className="border rounded px-2 py-1 bg-emerald-600 hover:bg-emerald-700 text-white 
-                            text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                <SimpleButton label="Registrar"/>
-            </div>
-
-            <div className="flex justify-center  items-center gap-2">
-                <p>Já possui uma conta?
-                    <Link to="/login" className="font-bold">Entrar</Link>
-                </p>
-            </div>
-
-           </form>
+        <div className="flex flex-col gap-2">
+          <label>Nome</label>
+          <input type="text" className="border rounded px-2 py-1" required
+            onChange={(e) => setName(e.target.value)} />
         </div>
-    )
+
+        <div className="flex flex-col gap-2">
+          <label>Email</label>
+          <input type="email" className="border rounded px-2 py-1" required
+            onChange={(e) => setEmail(e.target.value)} />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label>Telefone</label>
+          <input type="tel" className="border rounded px-2 py-1" required
+            onChange={(e) => setPhone(e.target.value)} />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label>Senha</label>
+          <input type="password" className="border rounded px-2 py-1" required
+            onChange={(e) => setPassword(e.target.value)} />
+        </div>
+
+        <div className="bg-emerald-600 hover:bg-emerald-700 text-white 
+                        text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <SimpleButton label="Registrar"  />
+        </div>
+
+        <p className="text-center">
+          Já possui uma conta?{" "}
+          <Link to="/login" className="font-bold">Entrar</Link>
+        </p>
+      </form>
+    </div>
+  );
 }
