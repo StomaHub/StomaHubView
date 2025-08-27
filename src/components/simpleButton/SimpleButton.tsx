@@ -8,7 +8,7 @@ type SimpleButtonProps = {
 
 function SimpleButton({label}: SimpleButtonProps) {
   return (
-    <button
+    <button type="submit"
         className="w-full h-full flex items-center justify-center">
         {label} 
     </button>

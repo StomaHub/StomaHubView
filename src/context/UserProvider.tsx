@@ -1,5 +1,4 @@
 //Provider vai fornecer o contexto para a aplicação
-
 import { useState, type ReactNode } from "react";
 import { UserContext } from "./UserContext";
 

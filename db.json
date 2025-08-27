@@ -1,35 +1,52 @@
 {
   "expertform": [],
-  "daily": [
-    {}
-  ],
+  "daily": [],
   "products": [
     {
-      "id": "a40cb709-0de5-4705-8ea9-e42987d32e4b",
+      "id": "2c9d948a-df0b-4019-b90b-fdac846fc0d5",
       "name": "Bolsa",
-      "description": "Coletora",
+      "description": "coletora",
       "price": "23.00",
       "image": "",
       "category": "Bolsas coletoras",
       "button": "Comprar"
+    }
+  ],
+  "users": [
+    {
+      "id": "51171a0a-ecda-4f7e-a901-08c75aa203f0",
+      "name": "Lariany",
+      "email": "larianyalves10@gmail.com",
+      "phone": "88992666504",
+      "password": "123456"
     },
     {
-      "id": "5007c324-4345-48b3-8334-528c51fd029d",
-      "name": "a",
-      "description": "a",
-      "price": "a",
-      "image": "a",
-      "category": "Bolsas coletoras",
-      "button": "Comprar"
+      "id": "16a5205b-b3a4-4e7c-b263-88e4124506aa",
+      "name": "teste",
+      "email": "teste@gmail.com",
+      "phone": "1234566",
+      "password": "12345"
     },
     {
-      "id": "107e1d71-c88f-4cd4-ab88-f2b0fbe637a9",
-      "name": "a",
-      "description": "a",
-      "price": "a",
-      "image": "a",
-      "category": "Bolsas coletoras",
-      "button": "Comprar"
+      "id": "724f447b-de86-4e6e-ac69-7f8de3c6aa0f",
+      "name": "teste",
+      "email": "teste@gmail.com",
+      "phone": "123455",
+      "password": "1234345"
+    },
+    {
+      "id": "3630bd22-6930-44f5-9cc3-0062107d8fa6",
+      "name": "lariany",
+      "email": "lariany@gmail.com",
+      "phone": "12345",
+      "password": "12345"
+    },
+    {
+      "id": "6e555411-de95-43f5-a502-130552a3627a",
+      "name": "lariany",
+      "email": "lariany@gmail.com",
+      "phone": "123455",
+      "password": "12345"
     }
   ]
 }

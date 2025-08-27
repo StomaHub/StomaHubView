@@ -36,6 +36,11 @@ export default function Card({name, description, image, price}: CardProps) {
                         className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer disabled:opacity-50 disabled:pointer-events-none">
                        Comprar
                     </button>
+
+                     <button
+                        className="flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer disabled:opacity-50 disabled:pointer-events-none">
+                       Deletar
+                    </button>
                 </div>
             </div>
         </section>

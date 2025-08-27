@@ -28,6 +28,7 @@ export default function ProductForm({ close, add, fetch }: ProductFormProps) {
       image,
       category,
       button: "Comprar",
+      buttonDelete: "Excluir" 
     };
 
     try {

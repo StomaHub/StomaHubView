@@ -12,6 +12,7 @@ import type { Product } from "../../types/types";
 
 export default function ProductsPage() {
   const [showFormProduct, setShowFormProduct] = useState(false);
+  const [product, setProduct]= useState<Product[]>([]);
   const [filterCategory, setFilterCategoy] =useState<string>("Todos os produtos");
   const { data: products, isPending, error, fetchData } = useFetch<Product[]>("http://localhost:3000/products");
 
@@ -23,6 +24,9 @@ export default function ProductsPage() {
     }
   };
 
+  const removeProduct = (id: string) => {
+    setProduct((p) => p.filter((p) => p.id !== id));
+  };
 
  {/* const filterCProducts = products?.filter( (p)=>
       (filterCategory === "Todos os produtos " || p.category=== filterCategory) &&
