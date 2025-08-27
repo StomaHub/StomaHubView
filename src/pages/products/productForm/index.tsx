@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import type { UseFetchResult } from "../../../hook/useFetch";
-import type { Product } from "../../../types/types";
+import type { Product as Products} from "../../../../src/types/types";
 import { v4 as uuidv4 } from "uuid";
 
 
 interface ProductFormProps {
   close: () => void;
-  add: (product: Product) => void;
-  fetch: UseFetchResult<Product[]>;
+  add: (product: Products) => void;
+  fetch: UseFetchResult<Products[]>;
 }
 
 export default function ProductForm({ close, add, fetch }: ProductFormProps) {
@@ -20,7 +20,7 @@ export default function ProductForm({ close, add, fetch }: ProductFormProps) {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const newProduct: Product = {
+    const newProduct: Products = {
       id:uuidv4(),
       name,
       description,
@@ -28,6 +28,7 @@ export default function ProductForm({ close, add, fetch }: ProductFormProps) {
       image,
       category,
       button: "Comprar",
+      buttonDelete: "Excluir" 
     };
 
     try {

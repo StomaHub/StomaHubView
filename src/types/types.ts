@@ -6,6 +6,7 @@ export type Product = {
   description: string;
   price: string;
   button: string;
+  buttonDelete: string;
 };
 
  export type Doctor = {
@@ -13,4 +14,12 @@ export type Product = {
     name: string,
     email: string,
     observation: string
+}
+
+export type User ={
+    id:string;
+    name:string;
+    email:string;
+    phone:string;
+    password:string;
 }

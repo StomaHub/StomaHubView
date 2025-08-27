@@ -4,25 +4,30 @@ import NavBarLinks from "../../components/navBar/navBarLinks";
 import Search from "../../components/search";
 import Title from "../../components/titles/Title";
 import SimpleButton from "../../components/simpleButton/SimpleButton";
-import ProductForm from "./productForm";
 import { Plus } from "lucide-react";
 import useFetch from "../../hook/useFetch";
-import type { Product } from "../../types/types";
+import type { Products } from "../../types/types";
+import ProductForm from "./productForm";
+
 
 
 export default function ProductsPage() {
   const [showFormProduct, setShowFormProduct] = useState(false);
+  const [product, setProduct]= useState<Products[]>([]);
   const [filterCategory, setFilterCategoy] =useState<string>("Todos os produtos");
-  const { data: products, isPending, error, fetchData } = useFetch<Product[]>("http://localhost:3000/products");
+  const { data: products, isPending, error, fetchData } = useFetch<Products[]>("http://localhost:3000/products");
 
 
 
-  const handleAddProduct = (product: Product) => {
+  const handleAddProduct = (product: Products) => {
     if (products) {
       fetchData(); // Recarrega a lista do "backend"
     }
   };
 
+  const removeProduct = (id: string) => {
+    setProduct((p) => p.filter((p) => p.id !== id));
+  };
 
  {/* const filterCProducts = products?.filter( (p)=>
       (filterCategory === "Todos os produtos " || p.category=== filterCategory) &&
@@ -72,7 +77,7 @@ export default function ProductsPage() {
           {isPending && <p>Carregando produtos...</p>}
           {error && <p className="text-red-500">{error}</p>}
           {products && products.length > 0 ? (
-            products.map((p) => <Card key={p.id} {...p} />)
+            products.map((p) => <Card amount={0} dateAddition={""} status={"ativo"} key={p.id} {...p} />)
           ) : (
             <p className="text-center col-span-3">Nenhum produto encontrado</p>
           )}
