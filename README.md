@@ -25,5 +25,8 @@ Comando para execução de testes e2e:
   - npx playwright install
   - npx playwright test tests/{nome_do_arquivo}
           Exemplo: npx playwright test tests/{navbar.spec.tsx}
-
+    
+Comando para buildar e rodar com service work
+  -npx vite build
+  -npx serve dist -s
 
