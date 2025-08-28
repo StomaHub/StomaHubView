@@ -8,6 +8,8 @@ Estrutura de diretórios deste repositório
 
 Passos para execução em ambiente de desenvolvimento:
   - npm i -y
+    (pode ser necessario instalar manualmente o uuid)
+    -npm i uuid
   - npm run dev
 
 Para rodar o json-server, use:
@@ -29,4 +31,5 @@ Comando para execução de testes e2e:
 Comando para buildar e rodar com service work
   -npx vite build
   -npx serve dist -s
+
 
